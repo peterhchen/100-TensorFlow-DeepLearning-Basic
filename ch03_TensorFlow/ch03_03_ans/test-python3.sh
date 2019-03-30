@@ -1,0 +1,11 @@
+python3 basic1.py
+python3 tensor-elem1.py
+python3 tensor-elem2.py
+python3 tensor-elem3.py
+python3 tf-const.py
+python3 tf-const2.py
+python3 tf-cpu.py
+#python3 tf-gpu.py
+python3 tf-math-ops.py
+python3 tf-save-data.py
+python3 tf-var-multiply.py

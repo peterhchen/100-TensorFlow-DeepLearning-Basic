@@ -1,0 +1,11 @@
+import tensorflow as tf # tf-gpu.py
+
+with tf.Session() as sess:
+  with tf.device("/gpu:1"):
+    m1 = tf.constant([[3., 3.]])
+    m2 = tf.constant([[2.],[2.]])
+    p1 = tf.matmul(m1, m2)
+    print('m1:',sess.run(m1))
+    print('m2:',sess.run(m2))
+    print('p1:',sess.run(p1))
+
