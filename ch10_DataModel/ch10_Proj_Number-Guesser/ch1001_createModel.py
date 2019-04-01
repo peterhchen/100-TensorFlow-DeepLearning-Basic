@@ -11,11 +11,17 @@ x_train = tf.keras.utils.normalize(x_train, axis=1)
 x_test = tf.keras.utils.normalize(x_test, axis=1)
 
 for train in range(len(x_train)):
+#for train in range(2):
+    # print ('train: ', train)
     for row in range(28):
+        #print ('row: ', row)
         for x in range(28):
+            # print ('x: ', x)
             if x_train[train][row][x] != 0:
                 x_train[train][row][x] = 1
+            #print ('x_train [', train, '][', row, '][', x, '] = ', x_train[train][row][x])
 
+#print ('shape: ', tf.shape (x_train))
 model = tf.keras.models.Sequential()
 model.add(tf.keras.layers.Flatten())
 model.add(tf.keras.layers.Dense(128, activation=tf.nn.relu))

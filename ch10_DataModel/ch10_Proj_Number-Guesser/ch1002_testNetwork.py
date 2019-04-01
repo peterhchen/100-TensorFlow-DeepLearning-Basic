@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 mnist = tf.keras.datasets.mnist
 (x_train, y_train),(x_test, y_test) = mnist.load_data()
 x_test = tf.keras.utils.normalize(x_test, axis=1)
+#print ('len(x_test)', len(x_test))
+
 for test in range(len(x_test)):
     for row in range(28):
         for x in range(28):
@@ -35,4 +37,3 @@ for x in range(len(predictions)):
 
 print("The program got", count, 'wrong, out of', len(x_test))
 print(str(100 - ((count/len(x_test))*100)) + '% correct')
-
