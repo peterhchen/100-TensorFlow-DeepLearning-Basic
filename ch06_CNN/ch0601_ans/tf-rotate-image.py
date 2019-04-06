@@ -8,6 +8,10 @@ image = tf.Variable(myimage,name='image')
 vars = tf.global_variables_initializer()
 
 sess = tf.Session()
+# orignal=[0, 1, 2]
+# 0: horizontal, 1: vertical
+#flipped = tf.transpose(image, perm=[0,1,2])
+# [x, y, channel] = [y, x, channel] ==> flipped = [1,0,2]
 flipped = tf.transpose(image, perm=[1,0,2])
 sess.run(vars)
 result=sess.run(flipped)
